@@ -1283,7 +1283,7 @@ Type | Additional mandatory parameters | Additional Information
 Other info:
 
 * Any `LIMIT` or `LIMIT_MAKER` type order can be made an iceberg order by sending an `icebergQty`.
-* Any order with an `icebergQty` MUST have `timeInForce` set to `GTC`.
+* Any order with an `icebergQty` other than `LIMIT_MAKER` MUST have `timeInForce` set to `GTC`.
 * For `STOP_LOSS`, `STOP_LOSS_LIMIT`, `TAKE_PROFIT_LIMIT` and `TAKE_PROFIT` orders, `trailingDelta` can be combined with `stopPrice`.
 * `MARKET` orders using `quoteOrderQty` will not break `LOT_SIZE` filter rules; the order will execute a `quantity` that will have the notional value as close as possible to `quoteOrderQty`.
 Trigger order price rules against market price for both MARKET and LIMIT versions:
